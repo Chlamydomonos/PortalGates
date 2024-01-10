@@ -8,7 +8,7 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = '0.0.0'
+version = '0.1.0'
 group = 'xyz.chlamydomonos.ptgt'
 //noinspection GroovyUnusedAssignment
 archivesBaseName = 'ptgt'
