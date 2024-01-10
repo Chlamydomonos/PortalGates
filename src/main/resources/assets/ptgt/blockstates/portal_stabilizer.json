@@ -1,0 +1,102 @@
+{
+  "variants": {
+    "facing=down,rotation=none": {
+      "model": "ptgt:block/portal_stabilizer",
+      "x": 180,
+      "y": 180
+    },
+    "facing=down,rotation=clockwise_90": {
+      "model": "ptgt:block/portal_stabilizer",
+      "x": 180,
+      "y": 270
+    },
+    "facing=down,rotation=clockwise_180": {
+      "model": "ptgt:block/portal_stabilizer",
+      "x": 180
+    },
+    "facing=down,rotation=clockwise_270": {
+      "model": "ptgt:block/portal_stabilizer",
+      "x": 180,
+      "y": 90
+    },
+    "facing=up,rotation=none": {
+      "model": "ptgt:block/portal_stabilizer"
+    },
+    "facing=up,rotation=clockwise_90": {
+      "model": "ptgt:block/portal_stabilizer",
+      "y": 270
+    },
+    "facing=up,rotation=clockwise_180": {
+      "model": "ptgt:block/portal_stabilizer",
+      "y": 180
+    },
+    "facing=up,rotation=clockwise_270": {
+      "model": "ptgt:block/portal_stabilizer",
+      "y": 90
+    },
+    "facing=north,rotation=none": {
+      "model": "ptgt:block/portal_stabilizer"
+    },
+    "facing=north,rotation=clockwise_90": {
+      "model": "ptgt:block/portal_stabilizer_horizontal"
+    },
+    "facing=north,rotation=clockwise_180": {
+      "model": "ptgt:block/portal_stabilizer",
+      "x": 180,
+      "y": 180
+    },
+    "facing=north,rotation=clockwise_270": {
+      "model": "ptgt:block/portal_stabilizer_horizontal",
+      "y": 270
+    },
+    "facing=south,rotation=none": {
+      "model": "ptgt:block/portal_stabilizer",
+      "y": 180
+    },
+    "facing=south,rotation=clockwise_90": {
+      "model": "ptgt:block/portal_stabilizer_horizontal",
+      "y": 180
+    },
+    "facing=south,rotation=clockwise_180": {
+      "model": "ptgt:block/portal_stabilizer",
+      "x": 180
+    },
+    "facing=south,rotation=clockwise_270": {
+      "model": "ptgt:block/portal_stabilizer_horizontal",
+      "y": 90
+    },
+    "facing=west,rotation=none": {
+      "model": "ptgt:block/portal_stabilizer",
+      "y": 270
+    },
+    "facing=west,rotation=clockwise_90": {
+      "model": "ptgt:block/portal_stabilizer_horizontal",
+      "y": 270
+    },
+    "facing=west,rotation=clockwise_180": {
+      "model": "ptgt:block/portal_stabilizer",
+      "x": 180,
+      "y": 90
+    },
+    "facing=west,rotation=clockwise_270": {
+      "model": "ptgt:block/portal_stabilizer_horizontal",
+      "y": 180
+    },
+    "facing=east,rotation=none": {
+      "model": "ptgt:block/portal_stabilizer",
+      "y": 90
+    },
+    "facing=east,rotation=clockwise_90": {
+      "model": "ptgt:block/portal_stabilizer_horizontal",
+      "y": 90
+    },
+    "facing=east,rotation=clockwise_180": {
+      "model": "ptgt:block/portal_stabilizer",
+      "x": 180,
+      "y": 270
+    },
+    "facing=east,rotation=clockwise_270": {
+      "model": "ptgt:block/portal_stabilizer_horizontal"
+    }
+  }
+}

@@ -1,2 +1,3 @@
-# Kotlin Modding Skeleton
-Provides an example mod written in Kotlin using Kotlin for Forge.
+# Portal Gates
+
+一个沉浸式传送门的附属mod，增加了电动的传送门，还额外增加一个非常亮的灯。

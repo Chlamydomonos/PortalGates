@@ -1,0 +1,9 @@
+{
+  "block.ptgt.portal_frame": "Portal Frame",
+  "block.ptgt.portal_generator": "Portal Generator",
+  "block.ptgt.portal_stabilizer": "Portal Stabilizer",
+  "block.ptgt.portal_stabilizer_connector": "Portal Stabilizer Connector",
+  "item.ptgt.debug_stick": "Debug Stick",
+  "item.ptgt.wrench": "Wrench",
+  "itemGroup.ptgt": "Portal Gates"
+}

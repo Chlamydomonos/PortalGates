@@ -6,21 +6,22 @@ loaderVersion="[3,)" # Require at least 3.x
 license='LGPL'
 
 [[mods]]
-modId="examplemod"
+modId="ptgt"
 version="${file.jarVersion}"
-displayName="ExampleMod"
-credits="The ExampleMod dev team"
-authors="ExampleModAuthor"
+displayName="Portal Gates"
+credits="X'bao! Th'wgha! Chlamydomonos xia'd tschilhib'sgn!"
+authors="Chlamydomonos"
 description='''
-Example mod that uses Kotlin for Forge.
+A mod that adds electric portal gates to Minecraft.
+Also adds a very bright light.
 '''
-[[dependencies.examplemod]]
+[[dependencies.ptgt]]
     modId="forge"
     mandatory=true
     versionRange="[41,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.examplemod]]
+[[dependencies.ptgt]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.19,1.20)"

@@ -1,0 +1,9 @@
+{
+  "block.ptgt.portal_frame": "传送门框架",
+  "block.ptgt.portal_generator": "传送门生成器",
+  "block.ptgt.portal_stabilizer": "传送门稳定器",
+  "block.ptgt.portal_stabilizer_connector": "传送门稳定器连接器",
+  "item.ptgt.debug_stick": "调试杖",
+  "item.ptgt.wrench": "扳手",
+  "itemGroup.ptgt": "传送之门"
+}
