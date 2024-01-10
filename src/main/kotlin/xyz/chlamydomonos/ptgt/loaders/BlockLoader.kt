@@ -71,5 +71,8 @@ object BlockLoader : Iterable<BlockAndItsItem<out BaseBlock>> {
         val PORTAL_STABILIZER by register("portal_stabilizer") { PortalStabilizerBlock() }
         val PORTAL_STABILIZER_CONNECTOR by register("portal_stabilizer_connector") { PortalStabilizerConnectorBlock() }
         val PORTAL_GENERATOR by register("portal_generator") { PortalGeneratorBlock() }
+        val SPOTLIGHT by register("spotlight") { SpotlightBlock() }
+        val BRIGHT_AIR by BLOCKS.registerObject("bright_air") { BrightAirBlock() }
+        val WATERLOGGED_BRIGHT_AIR by BLOCKS.registerObject("waterlogged_bright_air") { WaterloggedBrightAirBlock() }
     }
 }

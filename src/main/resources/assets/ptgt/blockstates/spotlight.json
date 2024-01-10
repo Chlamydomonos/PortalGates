@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "ptgt:block/spotlight",
+      "x": 180
+    },
+    "facing=up": {
+      "model": "ptgt:block/spotlight"
+    },
+    "facing=north": {
+      "model": "ptgt:block/spotlight",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "ptgt:block/spotlight",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ptgt:block/spotlight",
+      "x": 90,
+      "y": 270
+    },
+    "facing=east": {
+      "model": "ptgt:block/spotlight",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -27,3 +27,9 @@ Also adds a very bright light.
     versionRange="[1.19,1.20)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.ptgt]]
+    modId="immersive_portals"
+    mandatory=true
+    versionRange="[2.3,)"
+    ordering="NONE"
+    side="BOTH"

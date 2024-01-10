@@ -3,8 +3,9 @@ package xyz.chlamydomonos.ptgt.items
 import net.minecraft.core.Direction
 import net.minecraft.world.InteractionResult
 import net.minecraft.world.item.context.UseOnContext
-import xyz.chlamydomonos.ptgt.items.bases.BaseItem
+import xyz.chlamydomonos.ptgt.blocks.SpotlightBlock
 import xyz.chlamydomonos.ptgt.blocks.bases.RotatableBlock
+import xyz.chlamydomonos.ptgt.items.bases.BaseItem
 
 class WrenchItem : BaseItem() {
     override fun useOn(context: UseOnContext): InteractionResult {
@@ -33,6 +34,15 @@ class WrenchItem : BaseItem() {
                 level.setBlockAndUpdate(pos, newState)
             }
             return InteractionResult.SUCCESS
+        }
+
+        if (block is SpotlightBlock) {
+            val facing = blockState.getValue(SpotlightBlock.FACING)
+            val facingId = facing.ordinal
+            val newFacingId = if (facingId == Direction.values().size - 1) 0 else facingId + 1
+            val newFacing = Direction.values()[newFacingId]
+            val newState = blockState.setValue(SpotlightBlock.FACING, newFacing)
+            level.setBlockAndUpdate(pos, newState)
         }
 
         return InteractionResult.PASS
