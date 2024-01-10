@@ -6,8 +6,7 @@ import thedarkcolour.kotlinforforge.forge.MOD_BUS
 import thedarkcolour.kotlinforforge.forge.ObjectHolderDelegate
 import thedarkcolour.kotlinforforge.forge.registerObject
 import xyz.chlamydomonos.ptgt.PortalGates
-import xyz.chlamydomonos.ptgt.items.DebugStickItem
-import xyz.chlamydomonos.ptgt.items.WrenchItem
+import xyz.chlamydomonos.ptgt.items.*
 import xyz.chlamydomonos.ptgt.items.bases.BaseItem
 import xyz.chlamydomonos.ptgt.loaders.utils.ItemWithHandheldInfo
 import kotlin.reflect.KProperty

@@ -1,6 +1,7 @@
 package xyz.chlamydomonos.ptgt
 
 import net.minecraftforge.fml.common.Mod
+import xyz.chlamydomonos.ptgt.loaders.BlockEntityLoader
 import xyz.chlamydomonos.ptgt.loaders.BlockLoader
 import xyz.chlamydomonos.ptgt.loaders.ItemLoader
 
@@ -11,5 +12,6 @@ object PortalGates {
     init {
         BlockLoader.initAll()
         ItemLoader.initAll()
+        BlockEntityLoader.initAll()
     }
 }
