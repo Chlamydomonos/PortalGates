@@ -4,7 +4,7 @@ import net.minecraft.world.item.context.BlockPlaceContext
 import net.minecraft.world.level.block.state.BlockState
 
 open class Rotatable2PortBlock(properties: Properties) : RotatableBlock(properties) {
-    override fun getStateForPlacement(context: BlockPlaceContext): BlockState? {
+    override fun getStateForPlacement(context: BlockPlaceContext): BlockState {
         val face = context.clickedFace
         val baseState = this.defaultBlockState()
         val faceOpposite = face.opposite

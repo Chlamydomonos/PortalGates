@@ -4,28 +4,34 @@ import net.minecraft.core.BlockPos
 import net.minecraft.core.Direction
 import net.minecraft.world.item.context.BlockPlaceContext
 import net.minecraft.world.level.BlockGetter
+import net.minecraft.world.level.LevelAccessor
 import net.minecraft.world.level.block.Block
+import net.minecraft.world.level.block.SimpleWaterloggedBlock
 import net.minecraft.world.level.block.state.BlockState
 import net.minecraft.world.level.block.state.StateDefinition
+import net.minecraft.world.level.block.state.properties.BlockStateProperties
 import net.minecraft.world.level.block.state.properties.EnumProperty
+import net.minecraft.world.level.material.FluidState
 import net.minecraft.world.phys.shapes.CollisionContext
 import net.minecraft.world.phys.shapes.VoxelShape
 import xyz.chlamydomonos.ptgt.blocks.bases.BaseBlock
+import xyz.chlamydomonos.ptgt.blocks.utils.WaterloggedUtil
 
-class SpotlightBlock : BaseBlock(DEFAULT_PROPERTIES) {
+class SpotlightBlock : BaseBlock(DEFAULT_PROPERTIES), SimpleWaterloggedBlock {
     companion object {
         val FACING: EnumProperty<Direction> = EnumProperty.create("facing", Direction::class.java)
     }
 
     override fun createBlockStateDefinition(builder: StateDefinition.Builder<Block, BlockState>) {
-        builder.add(FACING)
+        builder.add(FACING, BlockStateProperties.WATERLOGGED)
     }
 
-    override fun getStateForPlacement(context: BlockPlaceContext): BlockState? {
+    override fun getStateForPlacement(context: BlockPlaceContext): BlockState {
         val face = context.clickedFace
         val baseState = this.defaultBlockState()
         val faceOpposite = face.opposite
-        return baseState.setValue(FACING, faceOpposite)
+        val state = baseState.setValue(FACING, faceOpposite)
+        return WaterloggedUtil.getStateForWaterloggedBlock(state, context)
     }
 
     override fun getLightEmission(state: BlockState?, level: BlockGetter?, pos: BlockPos?): Int {
@@ -62,5 +68,23 @@ class SpotlightBlock : BaseBlock(DEFAULT_PROPERTIES) {
         context: CollisionContext
     ): VoxelShape {
         return getShape(state, level, pos, context)
+    }
+
+    @Suppress("OVERRIDE_DEPRECATION", "DEPRECATION")
+    override fun updateShape(
+        state: BlockState,
+        facing: Direction,
+        facingState: BlockState,
+        level: LevelAccessor,
+        currentPos: BlockPos,
+        facingPos: BlockPos
+    ): BlockState {
+        WaterloggedUtil.updateShape(state, level, currentPos)
+        return super.updateShape(state, facing, facingState, level, currentPos, facingPos)
+    }
+
+    @Suppress("OVERRIDE_DEPRECATION", "DEPRECATION")
+    override fun getFluidState(state: BlockState): FluidState {
+        return WaterloggedUtil.getFluidState(state) { super.getFluidState(state) }
     }
 }

@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.state.BlockState
 import xyz.chlamydomonos.ptgt.blocks.bases.RotatableBlock
 
 class PortalStabilizerBlock : RotatableBlock(DEFAULT_PROPERTIES) {
-    override fun getStateForPlacement(context: BlockPlaceContext): BlockState? {
+    override fun getStateForPlacement(context: BlockPlaceContext): BlockState {
         val face = context.clickedFace
         val baseState = this.defaultBlockState()
         val faceOpposite = face.opposite
